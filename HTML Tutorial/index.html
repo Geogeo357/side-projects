@@ -1,0 +1,61 @@
+<html>
+     <head>
+         <title>Code Tutorial</title>
+         
+         <script>
+             
+             var colorsArr = ["red", "orange", "blue", "black", "white", "green", "aqua", "gray", "yellow", "teal", "silver", "lime", "navy"];
+             var colorPos = 0;
+             
+             function funify(){
+                 var ourP = document.getElementById("numberP");
+                 ourP.style.backgroundColor = colorsArr[colorPos];
+                 colorPos++;
+                 if(colorPos >= colorsArr.length){
+                     colorPos = 0;
+                 }
+             }
+             
+            function subtractOne(){ 
+                var ourP = document.getElementById("numberP");
+                var ourNumText = ourP.innerHTML;
+                var ourNum = parseInt(ourNumText);
+                ourNum--;
+                ourP.innerHTML = ourNum;
+            }
+             
+             function addOne(){ 
+                var ourP = document.getElementById("numberP");
+                var ourNumText = ourP.innerHTML;
+                var ourNum = parseInt(ourNumText);
+                ourNum++;
+                ourP.innerHTML = ourNum;
+            }
+             
+             function multiplyBy16(){ 
+                var ourP = document.getElementById("numberP");
+                var ourNumText = ourP.innerHTML;
+                var ourNum = parseInt(ourNumText);
+                ourNum*= 16;
+                ourP.innerHTML = ourNum;
+            }
+             
+             function divideBy16(){ 
+                var ourP = document.getElementById("numberP");
+                var ourNumText = ourP.innerHTML;
+                var ourNum = parseInt(ourNumText);
+                ourNum/= 16;
+                ourP.innerHTML = ourNum;
+            }
+         </script>
+     </head>
+     <body>
+         <p style="font-size:20vmin;text-align:center;color:red;margin:0px;">Code for Dummies</p>
+         <p id="numberP" style="font-size:25vmin;margin:0px;">0</p>
+         <button onclick="funify();" style="font-size:10vmin;">I'm bored</button>
+         <button onclick="subtractOne();" style="font-size:10vmin;">Subtract One</button>
+         <button onclick="addOne();" style="font-size:10vmin;">Add One</button>
+         <button onclick="multiplyBy16();" style="font-size:10vmin;">Multiply By 16</button>
+         <button onclick="divideBy16();" style="font-size:10vmin;">Divide By 16</button>
+     </body>
+</html>
